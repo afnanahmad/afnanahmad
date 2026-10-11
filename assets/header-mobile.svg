@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="460" viewBox="0 0 640 460" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Afnan Ahmad — Mobile &amp; ML Engineer</title>
+  <desc id="desc">Mobile engineer with a PhD in deep learning for indoor localization. iOS, Android, and applied ML. PhD in indoor positioning.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="640" y2="460" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0C1714" />
+      <stop offset="1" stop-color="#142C23" />
+    </linearGradient>
+    <clipPath id="frame">
+      <rect x="1" y="1" width="638" height="458" rx="24" />
+    </clipPath>
+    <style>
+      .sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+      .mono { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; }
+    </style>
+  </defs>
+  <g clip-path="url(#frame)">
+    <rect width="640" height="460" fill="url(#background)" />
+    <circle cx="594" cy="63" r="104" stroke="#BCF4CF" stroke-opacity="0.1" />
+    <circle cx="594" cy="63" r="71" stroke="#BCF4CF" stroke-opacity="0.16" stroke-dasharray="3 9" />
+    <circle cx="594" cy="63" r="6" fill="#BCF4CF" />
+    <circle cx="38" cy="49" r="4" fill="#BCF4CF" />
+    <text x="54" y="54" class="mono" font-size="15" letter-spacing="1.6" fill="#BCF4CF">MOBILE &amp; ML ENGINEER</text>
+    <text x="32" y="143" class="sans" font-size="68" font-weight="700" letter-spacing="-3" fill="#F3F4E9">Afnan Ahmad<tspan fill="#BCF4CF">.</tspan></text>
+    <text x="36" y="213" class="sans" font-size="34" font-weight="500" letter-spacing="-0.5" fill="#F3F4E9">Mobile engineer with a</text>
+    <text x="36" y="258" class="sans" font-size="34" font-weight="500" letter-spacing="-0.5" fill="#BCF4CF">PhD in deep learning for</text>
+    <text x="36" y="303" class="sans" font-size="34" font-weight="500" letter-spacing="-0.5" fill="#BCF4CF">indoor localization.</text>
+    <path d="M36 345H604" stroke="#355044" />
+    <text x="36" y="383" class="mono" font-size="17" letter-spacing="1" fill="#A8BDB0">iOS / ANDROID / APPLIED ML</text>
+    <text x="36" y="417" class="mono" font-size="17" letter-spacing="1" fill="#FFB094">PhD / INDOOR POSITIONING</text>
+  </g>
+  <rect x="1" y="1" width="638" height="458" rx="24" stroke="#355044" />
+</svg>
