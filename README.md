@@ -101,9 +101,5 @@ I'm Afnan, a **Mobile & ML Engineer** with a PhD in deep learning for indoor loc
 </p>
 
 <p align="center">
-  <img width="835" src="https://github-trophies.vercel.app/?username=afnanahmad&theme=gitdimmed&no-frame=true&no-bg=true&row=1&column=6&margin-w=10" alt="GitHub trophies" />
-</p>
-
-<p align="center">
   <img src="https://komarev.com/ghpvc/?username=afnanahmad&label=Profile%20views&color=2F6F55&style=flat-square" alt="Profile views" />
 </p>
