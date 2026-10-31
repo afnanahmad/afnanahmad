@@ -82,17 +82,20 @@ I'm Afnan, a **Mobile & ML Engineer** with a PhD in deep learning for indoor loc
 ## GitHub activity
 
 <p align="center">
-  <img height="155" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=afnanahmad&theme=github_dark&name=Afnan+Ahmad" alt="Contributions over the last year" />
-  <img height="155" src="assets/langs.svg" alt="Most used languages" />
+  <img height="190" src="assets/stats.svg" alt="GitHub stats" />
+  <img height="190" src="assets/streak.svg" alt="Contributions and streaks" />
 </p>
 
 <p align="center">
-  <img height="165" src="assets/stats.svg" alt="GitHub stats" />
-  <img height="165" src="assets/streak.svg" alt="Contributions and streaks" />
+  <img width="835" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=afnanahmad&theme=github_dark&name=Afnan+Ahmad" alt="Contributions over the last year" />
 </p>
 
 <p align="center">
-  <img width="830" src="https://github-trophies.vercel.app/?username=afnanahmad&theme=gitdimmed&no-frame=true&no-bg=true&row=1&column=6&margin-w=10" alt="GitHub trophies" />
+  <img width="835" src="assets/langs.svg" alt="Most used languages" />
+</p>
+
+<p align="center">
+  <img width="835" src="https://github-trophies.vercel.app/?username=afnanahmad&theme=gitdimmed&no-frame=true&no-bg=true&row=1&column=6&margin-w=10" alt="GitHub trophies" />
 </p>
 
 <p align="center">

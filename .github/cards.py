@@ -123,19 +123,20 @@ def stats_svg(u):
 
 
 def langs_svg(langs):
+    # full-width strip: 835 = stats (340) + streak (495) side by side
     bar, x = "", 25.0
     for _, color, pct in langs:
-        w = 290 * pct / 100
+        w = 785 * pct / 100
         bar += f'<rect x="{x:.1f}" y="55" width="{w:.1f}" height="8" fill="{color}"/>'
         x += w
-    legend = "".join(f'<circle cx="{30 + (i % 2) * 165}" cy="{88 + (i // 2) * 25}" r="5" fill="{color}"/>'
-                     f'<text x="{40 + (i % 2) * 165}" y="{92 + (i // 2) * 25}" class="t">{name} {pct:.1f}%</text>'
+    legend = "".join(f'<circle cx="{30 + (i % 3) * 265}" cy="{88 + (i // 3) * 25}" r="5" fill="{color}"/>'
+                     f'<text x="{40 + (i % 3) * 265}" y="{92 + (i // 3) * 25}" class="t">{name} {pct:.1f}%</text>'
                      for i, (name, color, pct) in enumerate(langs))
-    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="340" height="165" viewBox="0 0 340 165">
-<style>{FONT}.h{{font-size:18px;font-weight:600;fill:{ACCENT}}}.t{{font-size:12px;fill:{TEXT}}}</style>
-<rect width="340" height="165" rx="12" fill="{BG}"/>
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="835" height="140" viewBox="0 0 835 140">
+<style>{FONT}.h{{font-size:18px;font-weight:600;fill:{ACCENT}}}.t{{font-size:13px;fill:{TEXT}}}</style>
+<rect width="835" height="140" rx="12" fill="{BG}"/>
 <text x="25" y="38" class="h">Most Used Languages</text>
-<clipPath id="c"><rect x="25" y="55" width="290" height="8" rx="4"/></clipPath><g clip-path="url(#c)">{bar}</g>{legend}
+<clipPath id="c"><rect x="25" y="55" width="785" height="8" rx="4"/></clipPath><g clip-path="url(#c)">{bar}</g>{legend}
 </svg>
 """
 
