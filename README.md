@@ -87,8 +87,14 @@ I'm Afnan, a **Mobile & ML Engineer** with a PhD in deep learning for indoor loc
 </p>
 
 <p align="center">
-  <img width="835" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=afnanahmad&theme=github_dark&name=Afnan+Ahmad" alt="Contributions over the last year" />
+  <img width="835" src="assets/activity.svg" alt="Contribution activity" />
 </p>
+
+<!-- Desktop profiles already show GitHub's own graph; only phones get this one -->
+<picture>
+  <source media="(min-width: 601px)" srcset="assets/blank.svg" />
+  <img width="835" src="assets/heatmap.svg" alt="Contribution graph" />
+</picture>
 
 <p align="center">
   <img width="835" src="assets/langs.svg" alt="Most used languages" />
