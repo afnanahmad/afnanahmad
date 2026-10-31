@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="340" height="195" viewBox="0 0 340 195">
+<style>text{font-family:'Segoe UI',Ubuntu,sans-serif}.h{font-size:18px;font-weight:600;fill:#BCF4CF}.t{font-size:14px;fill:#E5EBE7}.b{font-weight:700;text-anchor:end}</style>
+<rect width="340" height="195" rx="12" fill="#0C1714"/>
+<text x="25" y="38" class="h">GitHub Stats</text><circle cx="34" cy="70" r="4" fill="#BCF4CF"/><text x="50" y="75" class="t">Total Stars:</text><text x="310" y="75" class="t b">9</text><circle cx="34" cy="95" r="4" fill="#BCF4CF"/><text x="50" y="100" class="t">Repositories:</text><text x="310" y="100" class="t b">53</text><circle cx="34" cy="120" r="4" fill="#BCF4CF"/><text x="50" y="125" class="t">Pull Requests:</text><text x="310" y="125" class="t b">404</text><circle cx="34" cy="145" r="4" fill="#BCF4CF"/><text x="50" y="150" class="t">Issues:</text><text x="310" y="150" class="t b">222</text><circle cx="34" cy="170" r="4" fill="#BCF4CF"/><text x="50" y="175" class="t">Contributed To:</text><text x="310" y="175" class="t b">8</text>
+</svg>

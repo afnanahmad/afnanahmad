@@ -1,0 +1,25 @@
+name: Profile cards
+
+on:
+  schedule:
+    - cron: "0 */6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python .github/cards.py --check && python .github/cards.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.STATS_TOKEN }}
+      - run: |
+          git add assets/*.svg
+          git diff --cached --quiet && exit 0
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Update profile cards"
+          git push

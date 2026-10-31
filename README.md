@@ -82,13 +82,13 @@ I'm Afnan, a **Mobile & ML Engineer** with a PhD in deep learning for indoor loc
 ## GitHub activity
 
 <p align="center">
-  <img height="155" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=afnanahmad&theme=github_dark" alt="Contributions over the last year" />
-  <img height="155" src="https://github-readme-stats.vercel.app/api/top-langs?username=afnanahmad&layout=compact&langs_count=6&bg_color=0C1714&title_color=BCF4CF&icon_color=BCF4CF&text_color=E5EBE7&hide_border=true&border_radius=12&disable_animations=true" alt="Most used languages" />
+  <img height="155" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=afnanahmad&theme=github_dark&name=Afnan+Ahmad" alt="Contributions over the last year" />
+  <img height="155" src="assets/langs.svg" alt="Most used languages" />
 </p>
 
 <p align="center">
-  <img height="165" src="https://github-readme-stats.vercel.app/api?username=afnanahmad&show_icons=true&hide_rank=true&bg_color=0C1714&title_color=BCF4CF&icon_color=BCF4CF&text_color=E5EBE7&hide_border=true&border_radius=12&disable_animations=true" alt="GitHub stats" />
-  <img height="165" src="https://streak-stats.demolab.com?user=afnanahmad&background=0C1714&ring=BCF4CF&fire=FFB094&currStreakNum=F3F4E9&sideNums=F3F4E9&currStreakLabel=BCF4CF&sideLabels=BCF4CF&dates=A8BDB0&stroke=24352F&hide_border=true&border_radius=12&disable_animations=true" alt="Contributions and streaks" />
+  <img height="165" src="assets/stats.svg" alt="GitHub stats" />
+  <img height="165" src="assets/streak.svg" alt="Contributions and streaks" />
 </p>
 
 <p align="center">
