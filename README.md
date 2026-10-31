@@ -82,8 +82,8 @@ I'm Afnan, a **Mobile & ML Engineer** with a PhD in deep learning for indoor loc
 ## GitHub activity
 
 <p align="center">
-  <img height="190" src="assets/stats.svg" alt="GitHub stats" />
-  <img height="190" src="assets/streak.svg" alt="Contributions and streaks" />
+  <img width="338" src="assets/stats.svg" alt="GitHub stats" />
+  <img width="492" src="assets/streak.svg" alt="Contributions and streaks" />
 </p>
 
 <p align="center">

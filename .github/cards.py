@@ -66,16 +66,19 @@ def span(s):
 
 
 def svg(total, cur, best):
-    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="495" height="195" viewBox="0 0 495 195">
-<style>{FONT}text{{text-anchor:middle}}.n{{font-size:28px;font-weight:700;fill:#F3F4E9}}.l{{font-size:14px;fill:{ACCENT}}}.d{{font-size:12px;fill:#A8BDB0}}</style>
-<rect width="495" height="195" rx="12" fill="{BG}"/>
-<line x1="165" y1="28" x2="165" y2="170" stroke="{STROKE}"/><line x1="330" y1="28" x2="330" y2="170" stroke="{STROKE}"/>
-<text class="n" x="82.5" y="79">{total:,}</text><text class="l" x="82.5" y="115">Total Contributions</text><text class="d" x="82.5" y="140">Last 12 Months</text>
-<mask id="m"><rect width="495" height="195" fill="white"/><ellipse cx="247.5" cy="32" rx="13" ry="18" fill="black"/></mask>
-<circle cx="247.5" cy="71" r="40" fill="none" stroke="{ACCENT}" stroke-width="5" mask="url(#m)"/>
-<path transform="translate(247.5 19.5)" fill="#FFB094" d="{FIRE}"/>
-<text class="n" x="247.5" y="81">{cur[0]}</text><text class="l" x="247.5" y="140" style="font-weight:700">Current Streak</text><text class="d" x="247.5" y="160">{span(cur)}</text>
-<text class="n" x="412.5" y="79">{best[0]}</text><text class="l" x="412.5" y="115">Longest Streak</text><text class="d" x="412.5" y="140">{span(best)}</text>
+    # content block (flame top 81 -> dates 191) centred between the header line (52) and the bottom (220)
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="495" height="220" viewBox="0 0 495 220">
+<style>{FONT}text{{text-anchor:middle}}.h{{font-size:18px;font-weight:600;fill:{ACCENT};text-anchor:start}}.v{{font-size:24px;font-weight:700;fill:#F3F4E9}}.k{{font-size:13px;fill:{ACCENT}}}.d{{font-size:12px;fill:#A8BDB0}}</style>
+<rect width="495" height="220" rx="12" fill="{BG}"/>
+<text x="25" y="38" class="h">Contribution Streak</text>
+<line x1="25" y1="52" x2="470" y2="52" stroke="{STROKE}"/>
+<line x1="165" y1="82" x2="165" y2="192" stroke="{STROKE}"/><line x1="330" y1="82" x2="330" y2="192" stroke="{STROKE}"/>
+<text class="v" x="82.5" y="128">{total:,}</text><text class="k" x="82.5" y="170">Total contributions</text><text class="d" x="82.5" y="188">Last 12 months</text>
+<mask id="m"><rect width="495" height="220" fill="white"/><ellipse cx="247.5" cy="93" rx="10" ry="14" fill="black"/></mask>
+<circle cx="247.5" cy="120" r="28" fill="none" stroke="{ACCENT}" stroke-width="4" mask="url(#m)"/>
+<path transform="translate(247.5 81) scale(.9)" fill="#FFB094" d="{FIRE}"/>
+<text class="v" x="247.5" y="128">{cur[0]}</text><text class="k" x="247.5" y="170" style="font-weight:700">Current streak</text><text class="d" x="247.5" y="188">{span(cur)}</text>
+<text class="v" x="412.5" y="128">{best[0]}</text><text class="k" x="412.5" y="170">Longest streak</text><text class="d" x="412.5" y="188">{span(best)}</text>
 </svg>
 """
 
@@ -95,7 +98,7 @@ def fetch_stats(user):
       publicRepos:repositories(ownerAffiliations:OWNER,privacy:PUBLIC,isFork:false){{totalCount}}
       repositories(ownerAffiliations:OWNER,isFork:false,first:100){{totalCount nodes{{stargazerCount
         languages(first:10,orderBy:{{field:SIZE,direction:DESC}}){{edges{{size node{{name color}}}}}}}}}}
-      pullRequests{{totalCount}} issues{{totalCount}}
+      pullRequests{{totalCount}} issues{{totalCount}} followers{{totalCount}}
       repositoriesContributedTo(contributionTypes:[COMMIT,PULL_REQUEST,ISSUE,REPOSITORY]){{totalCount}}}}}}""")
 
 
@@ -113,18 +116,20 @@ def top_langs(repos, n=6):
 
 
 def stats_svg(u):
-    rows = [("Total Stars", sum(r["stargazerCount"] for r in u["repositories"]["nodes"])),
-            ("Repositories", u["repositories"]["totalCount"]),
-            ("Pull Requests", u["pullRequests"]["totalCount"]),
-            ("Issues", u["issues"]["totalCount"]),
-            ("Contributed To", u["repositoriesContributedTo"]["totalCount"])]
-    body = "".join(f'<circle cx="34" cy="{y - 5}" r="4" fill="{ACCENT}"/>'
-                   f'<text x="50" y="{y}" class="t">{label}:</text><text x="310" y="{y}" class="t b">{value:,}</text>'
-                   for (label, value), y in zip(rows, range(75, 200, 25)))
-    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="340" height="195" viewBox="0 0 340 195">
-<style>{FONT}.h{{font-size:18px;font-weight:600;fill:{ACCENT}}}.t{{font-size:14px;fill:{TEXT}}}.b{{font-weight:700;text-anchor:end}}</style>
-<rect width="340" height="195" rx="12" fill="{BG}"/>
-<text x="25" y="38" class="h">GitHub Stats</text>{body}
+    stats = [(sum(r["stargazerCount"] for r in u["repositories"]["nodes"]), "Stars"),
+             (u["repositories"]["totalCount"], "Repositories"),
+             (u["pullRequests"]["totalCount"], "Pull requests"),
+             (u["issues"]["totalCount"], "Issues"),
+             (u["repositoriesContributedTo"]["totalCount"], "Contributed to"),
+             (u["followers"]["totalCount"], "Followers")]
+    body = "".join(f'<text x="{60 + (i % 3) * 110}" y="{103 + (i // 3) * 65}" class="v">{v:,}</text>'
+                   f'<text x="{60 + (i % 3) * 110}" y="{123 + (i // 3) * 65}" class="k">{k}</text>'
+                   for i, (v, k) in enumerate(stats))
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="340" height="220" viewBox="0 0 340 220">
+<style>{FONT}text{{text-anchor:middle}}.h{{font-size:18px;font-weight:600;fill:{ACCENT};text-anchor:start}}.v{{font-size:24px;font-weight:700;fill:#F3F4E9}}.k{{font-size:13px;fill:{ACCENT}}}</style>
+<rect width="340" height="220" rx="12" fill="{BG}"/>
+<text x="25" y="38" class="h">GitHub Stats</text>
+<line x1="25" y1="52" x2="315" y2="52" stroke="{STROKE}"/>{body}
 </svg>
 """
 
