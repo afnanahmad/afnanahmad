@@ -2,7 +2,7 @@
 <style>text{font-family:'Segoe UI',Ubuntu,sans-serif}text{text-anchor:middle}.n{font-size:28px;font-weight:700;fill:#F3F4E9}.l{font-size:14px;fill:#BCF4CF}.d{font-size:12px;fill:#A8BDB0}</style>
 <rect width="495" height="195" rx="12" fill="#0C1714"/>
 <line x1="165" y1="28" x2="165" y2="170" stroke="#24352F"/><line x1="330" y1="28" x2="330" y2="170" stroke="#24352F"/>
-<text class="n" x="82.5" y="79">3,170</text><text class="l" x="82.5" y="115">Total Contributions</text><text class="d" x="82.5" y="140">Last 12 Months</text>
+<text class="n" x="82.5" y="79">3,171</text><text class="l" x="82.5" y="115">Total Contributions</text><text class="d" x="82.5" y="140">Last 12 Months</text>
 <circle cx="247.5" cy="71" r="40" fill="none" stroke="#BCF4CF" stroke-width="5"/>
 <path d="M247.5 19c-5 6-8 9-8 13a8 8 0 0 0 16 0c0-4-3-7-8-13z" fill="#FFB094" stroke="#0C1714" stroke-width="3"/>
 <text class="n" x="247.5" y="81">27</text><text class="l" x="247.5" y="140" style="font-weight:700">Current Streak</text><text class="d" x="247.5" y="160">Oct 5 – Oct 31</text>
